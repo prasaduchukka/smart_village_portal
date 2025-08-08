@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meetings</title>
+    <link rel="stylesheet" href="/css/meetings.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Scheduler</h1>
+
+        <form id="meetingForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="datetime-local" id="scheduledDateTime" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <button type="submit">Add Meeting</button>
+        </form>
+
+        <hr>
+
+        <div id="meetingList"></div>
+    </div>
+
+    <script src="/javaScript/meetings.js"></script>
+</body>
+</html>

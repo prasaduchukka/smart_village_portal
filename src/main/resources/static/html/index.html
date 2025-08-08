@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinabhogili Village Info</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      background-color: #388e3c;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #1b5e20;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 260px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .quick-links .card {
+      background-color: #e0f7fa;
+      color: #00796b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+      transition: all 0.2s ease;
+    }
+
+    .quick-links .card:hover {
+      background-color: #b2ebf2;
+      transform: scale(1.04);
+    }
+
+    .faqs {
+      background-color: #fffde7;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+
+    .faqs ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .faqs li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>🌾 Chinabhogili Village Info</h1>
+      <nav class="navbar">
+        <a href="/html/meetings.html">Meetings</a>
+        <a href="education.html">Education</a>
+        <a href="/html/complaint.html">Complaints</a>
+        <a href="panchayith.html">Panchayith</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="games.html">Games</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="overview">
+      <h2>🏡 Village Overview</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>President</h3>
+          <p>Mr. Ramesh Kumar</p>
+        </div>
+        <div class="card">
+          <h3>Village Revenue Officer (VRO)</h3>
+          <p>Ms. Lakshmi Devi</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <a href="overview.html" class="card">📌 Overview</a>
+      <a href="population.html" class="card">👥 Population Details</a>
+      <a href="nearby.html" class="card">🗺️ Tourist Spots</a>
+      <a href="restaurants.html" class="card">🍽️ Hospitality</a>
+    </section>
+
+    <section class="faqs">
+      <h2>❓ Frequently Asked Questions</h2>
+      <ul>
+        <li><strong>Where is Chinabhogili located?</strong> Seethanagaram Mandal, Vizianagaram, Andhra Pradesh.</li>
+        <li><strong>Pincode:</strong> 535546</li>
+        <li><strong>Gram Panchayat:</strong> Chinnabhogili</li>
+        <li><strong>Population:</strong> 2,860 (2011 Census)</li>
+        <li><strong>Literacy Rate:</strong> 48.88%</li>
+        <li><strong>Households:</strong> 773</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chinabhogili.in | Data Source: Census India 2011</p>
+  </footer>
+</body>
+</html>

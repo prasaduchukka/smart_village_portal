@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Portal</title>
+	<link rel="stylesheet" href="/css/complaint.css">
+    <style>
+        .section { display: none; margin-top: 20px; }
+        .btn { padding: 8px 15px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Village Complaint Management</h1>
+
+	<div class="button-container">
+	    <button class="btn" onclick="showSection('submitSection')">Submit Complaint</button>
+	    <button class="btn" onclick="showSection('viewSection')">View All Complaints</button>
+	</div>
+
+    <!-- ✅ Complaint Form Section -->
+    <div id="submitSection" class="section">
+        <h2>Submit a Complaint</h2>
+        <form id="complaintForm">
+            <label>Title: <input type="text" id="title" placeholder="Complaint Title" required></label><br><br>
+            <label>Description:<br>
+                <textarea id="description" rows="4" cols="40" placeholder="Describe the issue" required></textarea>
+            </label><br><br>
+            <label>Submitted By: <input type="text" id="submittedBy" placeholder="Your Name" required></label><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+    </div>
+	
+	<!-- 🛠️ Update Complaint Section -->
+	<div id="updateFormContainer" class="section" >
+	    <h2>Update Complaint</h2>
+	    <form id="updateComplaintForm">
+	        <input type="hidden" id="updateId">
+	        <label>Title: <input type="text" id="updateTitle" required></label><br><br>
+	        <label>Description:<br>
+	            <textarea id="updateDescription" rows="4" cols="40" required></textarea>
+	        </label><br><br>
+	        <label>Submitted By: <input type="text" id="updateSubmittedBy" required></label><br><br>
+	        <button type="submit">Update Complaint</button>
+	    </form>
+	</div>
+
+    <!-- 📋 Complaint List Section -->
+    <div id="viewSection" class="section">
+        <h2>All Complaints</h2>
+        <div id="complaintsList"></div>
+    </div>
+
+    <script src="/javaScript/complaint.js"></script>
+</body>
+</html>

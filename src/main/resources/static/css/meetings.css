@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    background: white;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.meeting {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fdfdfd;
+}
+
+.meeting.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+}
+
+.checkbox {
+    float: right;
+}
