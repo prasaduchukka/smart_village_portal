@@ -1,20 +1,27 @@
-# Stage 1: Build the application using Maven
-FROM maven:3.9.6-eclipse-temurin-17 as builder
+# Stage 1: Build the app
+FROM maven:3.9.4-eclipse-temurin-17 AS build
 
+# Create app directory
 WORKDIR /app
 
+# Copy Maven config first (for caching dependencies)
 COPY pom.xml .
 COPY src ./src
 
+# Build the JAR (skipping tests for faster builds)
 RUN mvn clean package -DskipTests
 
-# Stage 2: Run the JAR using a lightweight image
-FROM openjdk:17-jdk-slim
+# Stage 2: Run the app
+FROM eclipse-temurin:17-jdk
 
+# Set working directory
 WORKDIR /app
 
-COPY --from=builder /app/target/*.jar app.jar
+# Copy the JAR from the build stage
+COPY --from=build /app/target/*.jar app.jar
 
+# Expose port (Render dynamically sets $PORT)
 EXPOSE 8095
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run using $PORT environment variable
+CMD ["sh", "-c", "java -jar app.jar --server.port=$PORT"]
