@@ -8,20 +8,55 @@
 <body>
     <div class="container">
         <h1>Meeting Scheduler</h1>
-
+		
+		<div class="button-container">
+		    <button class="btn" onclick="showSection('submitSection')">Submit Meeting</button>
+		    <button class="btn" onclick="showSection('viewSection')">View All Meetings</button>
+		</div>
+		
+		<div id="submitSection" class="section">
+		        <h2>Submit a Meeting</h2>
+				
         <form id="meetingForm">
             <input type="text" id="title" placeholder="Title" required>
             <textarea id="description" placeholder="Description" required></textarea>
             <input type="datetime-local" id="scheduledDateTime" required>
             <input type="text" id="location" placeholder="Location" required>
+			
+
             <button type="submit">Add Meeting</button>
         </form>
+		
+		    <div id="response"></div>
+		</div>
+		
+		<!-- 🛠️ Update Meeting Section -->
+		<div id="updateFormContainer" class="section" >
+		    <h2>Update Meeting</h2>
 
-        <hr>
+			<form id="updateMeetingForm">
+				<input type="hidden" id="updateId">
 
-        <div id="meetingList"></div>
+			    <input type="text" id="updateTitle" placeholder="Title" required>
+			    <textarea id="updateDescription" placeholder="Description" required></textarea>
+			    <input type="datetime-local" id="updateScheduledDateTime" required>
+			    <input type="text" id="updateLocation" placeholder="Location" required>
+				<label>
+				    <input type="checkbox" id="updateCompleted"> Completed
+				</label>
+
+			    <button type="submit">Update Meeting</button>
+			</form>
+			
+		</div>
+        
+		<div id="viewSection" class="section">
+			    <h2>All Meetings</h2>
+	        <div id="meetingList"></div>
+		</div>
     </div>
 
     <script src="/javaScript/meetings.js"></script>
+	<footer><a href="/html/index.html">⬅ Back to Home</a></footer>
 </body>
 </html>

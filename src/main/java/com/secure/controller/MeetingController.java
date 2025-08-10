@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.secure.entity.Complaint;
 import com.secure.entity.Meeting;
 import com.secure.service.MeetingService;
 
@@ -37,9 +38,13 @@ public class MeetingController {
 	}
 	
 	@PutMapping("/status/{id}")
-	public Meeting UpdateMeetStatus(@PathVariable Long id,@RequestParam boolean completed) {
-		return meetingService.updateMeetingStatus(id, completed);
+	public Meeting UpdateMeetStatus(@PathVariable Long id) {
+		Meeting meeting=meetingService.getMeetingById(id);
+		meeting.setCompleted(!meeting.isCompleted());
+		return meetingService.saveMeeting(meeting);
 	}
+	
+
 	
 	@PutMapping("/update/{id}")
 	public Meeting UpdateMeeting(@PathVariable Long id,@RequestBody Meeting updateMeeting) {

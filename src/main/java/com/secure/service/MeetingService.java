@@ -36,15 +36,15 @@ public class MeetingService {
 		return meetingRepository.findByCompleted(completed);		
 	}
 	
-	public Meeting updateMeetingStatus(Long id, boolean completed) {
-		Optional<Meeting> optionalMeeting = meetingRepository.findById(id);
-		if(optionalMeeting.isPresent()) {
-			Meeting meeting=optionalMeeting.get();
-			meeting.setCompleted(completed);
-			return meetingRepository.save(meeting);
-		}
-		return null;
-	}
+//	public Meeting updateMeetingStatus(Long id, boolean completed) {
+//		Optional<Meeting> optionalMeeting = meetingRepository.findById(id);
+//		if(optionalMeeting.isPresent()) {
+//			Meeting meeting=optionalMeeting.get();
+//			meeting.setCompleted(completed);
+//			return meetingRepository.save(meeting);
+//		}
+//		return null;
+//	}
 	
 	public Meeting updateMeeting(Long id, Meeting updatedMeeting) {
 	    return meetingRepository.findById(id).map(meet -> {

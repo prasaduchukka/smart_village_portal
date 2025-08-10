@@ -100,3 +100,25 @@ button[type="submit"]:hover {
     transform: scale(1.2);
     margin-right: 8px;
 }
+
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #388e3c;
+}
+

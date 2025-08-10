@@ -1,0 +1,72 @@
+/* === Reset and Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f4f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* === Header === */
+header {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* === Main Content Styling === */
+main.population {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+main.population ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main.population li {
+  font-size: 1.1rem;
+  background-color: #e8f0fe;
+  margin: 0.75rem 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #3f51b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+footer a:hover {
+  background-color: #303f9f;
+}

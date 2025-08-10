@@ -149,6 +149,25 @@
       margin-top: 2rem;
       font-size: 0.95rem;
     }
+	
+	#latestMeetings{
+		height: auto;
+		width: auto;
+		color: #333;
+		background-color: cadetblue;
+		text-align: center;
+		justify-content: center;
+	}
+	
+	#meetingTicker{
+		height: 1cm;
+		width: auto;
+		color: #333;
+		background-color: cadetblue;
+		text-align: center;
+		justify-content: center;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
   </style>
 </head>
 <body>
@@ -165,7 +184,13 @@
       </nav>
     </div>
   </header>
-
+  
+  		<section id="latestMeetings">
+	      <h2>Upcoming Meetings</h2>
+	      <marquee behavior="scroll" direction="left" scrollamount="5" id="meetingTicker">
+	          Loading meetings...
+	      </marquee>
+	  </section>
   <main>
     <section class="overview">
       <h2>🏡 Village Overview</h2>
@@ -182,10 +207,10 @@
     </section>
 
     <section class="quick-links">
-      <a href="overview.html" class="card">📌 Overview</a>
-      <a href="population.html" class="card">👥 Population Details</a>
-      <a href="nearby.html" class="card">🗺️ Tourist Spots</a>
-      <a href="restaurants.html" class="card">🍽️ Hospitality</a>
+      <a href="/html/overview.html" class="card">📌 Overview</a>
+      <a href="/html/population.html" class="card">👥 Population Details</a>
+      <a href="/html/nearby.html" class="card">🗺️ Tourist Spots</a>
+      <a href="/html/restaurants.html" class="card">🍽️ Hospitality</a>
     </section>
 
     <section class="faqs">
@@ -204,5 +229,6 @@
   <footer>
     <p>&copy; 2025 Chinabhogili.in | Data Source: Census India 2011</p>
   </footer>
+  <script src="/javaScript/homeMeetings.js"></script>
 </body>
 </html>
