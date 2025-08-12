@@ -23,7 +23,7 @@ document.getElementById("meetingForm").addEventListener("submit", async function
     };
 
     try {
-        const response = await fetch("http://localhost:8095/meetings/submit", {
+        const response = await fetch("https://smart-village-portal-zfsn.onrender.com/meetings/submit", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(meetingData)
@@ -45,7 +45,7 @@ document.getElementById("meetingForm").addEventListener("submit", async function
 // ✅ Fetch & Display Meetings
 async function fetchMeetings() {
     try {
-        const response = await fetch("http://localhost:8095/meetings/all");
+        const response = await fetch("https://smart-village-portal-zfsn.onrender.com/meetings/all");
         const meetings = await response.json();
 
         const listContainer = document.getElementById("meetingList");
@@ -79,7 +79,7 @@ async function fetchMeetings() {
 
 async function toggleResolved(id) {
     try {
-        await fetch(`http://localhost:8095/meetings/status/${id}`, { method: "PUT" });
+        await fetch(`https://smart-village-portal-zfsn.onrender.com/meetings/status/${id}`, { method: "PUT" });
         fetchMeetings(); // Refresh after toggle
     } catch (error) {
         console.error("Error updating complaint status:", error);
@@ -110,7 +110,7 @@ document.getElementById("updateMeetingForm").addEventListener("submit", async fu
     };
 
     try {
-        const response = await fetch(`http://localhost:8095/meetings/update/${id}`, {
+        const response = await fetch(`https://smart-village-portal-zfsn.onrender.com/meetings/update/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedMeeting)
@@ -133,7 +133,7 @@ async function deleteMeeting(id) {
     if (!confirm("Are you sure you want to delete this meeting?")) return;
 
     try {
-        const response = await fetch(`http://localhost:8095/meetings/${id}`, {
+        const response = await fetch(`https://smart-village-portal-zfsn.onrender.com/meetings/${id}`, {
             method: "DELETE"
         });
 

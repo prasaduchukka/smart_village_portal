@@ -18,7 +18,7 @@ function showSection(sectionId) {
             };
 
             try {
-                const response = await fetch("http://localhost:8095/complaint/submit", {
+                const response = await fetch("https://smart-village-portal-zfsn.onrender.com/complaint/submit", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(complaintData)
@@ -42,7 +42,7 @@ function showSection(sectionId) {
 
 		async function fetchComplaints() {
 		    try {
-		        const response = await fetch("http://localhost:8095/complaint/all");
+		        const response = await fetch("https://smart-village-portal-zfsn.onrender.com/complaint/all");
 		        const complaints = await response.json();
 
 		        const listContainer = document.getElementById("complaintsList");
@@ -76,7 +76,7 @@ function showSection(sectionId) {
 
         async function toggleResolved(id) {
             try {
-                await fetch(`http://localhost:8095/complaint/resolve/${id}`, { method: "PUT" });
+                await fetch(`https://smart-village-portal-zfsn.onrender.com/complaint/resolve/${id}`, { method: "PUT" });
                 fetchComplaints(); // Refresh after toggle
             } catch (error) {
                 console.error("Error updating complaint status:", error);
@@ -106,7 +106,7 @@ function showSection(sectionId) {
 
 		    try {
 				const id = updatedComplaint.id;
-		        const response = await fetch(`http://localhost:8095/complaint/update/${id}`, {
+		        const response = await fetch(`https://smart-village-portal-zfsn.onrender.com/complaint/update/${id}`, {
 		            method: "PUT",
 		            headers: { "Content-Type": "application/json" },
 		            body: JSON.stringify(updatedComplaint)
@@ -130,7 +130,7 @@ function showSection(sectionId) {
 		    if (!confirmDelete) return;
 
 		    try {
-		        const response = await fetch(`http://localhost:8095/complaint/${id}`, {
+		        const response = await fetch(`https://smart-village-portal-zfsn.onrender.com/complaint/${id}`, {
 		            method: "DELETE"
 		        });
 

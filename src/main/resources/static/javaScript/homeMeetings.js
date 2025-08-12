@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchMeetingsTicker() {
-    fetch("http://localhost:8095/meetings/all")
+    fetch("https://smart-village-portal-zfsn.onrender.com/meetings/all")
         .then(response => response.json())
         .then(meetings => {
             const ticker = document.getElementById("meetingTicker");
